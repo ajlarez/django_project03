@@ -1,10 +1,25 @@
 
+{% load static %}
+<head>
+<link rel="stylesheet" href="{% static 'css/post.css' %}">
+
+</head>
+<body>
+    
 
 {% for post in object_list %}
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.content }}</p>
+  <div class="post-container">
+    <div class="post-text">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.content }}</p>
+    </div>
 
-    {% if post.image %}
-    <img src="{{ post.image.url }}" alt="Imagen de {{ post.title }}" style="max-width: 100%; height: auto;">
-    {% endif %}
+    <div class="post-images">
+        {% if post.image %}
+            <img src="{{ post.image.url }}" alt="Imagen de {{ post.title }}">
+        {% endif %}
+    </div>
+  </div>
 {% endfor %}
+
+</body>

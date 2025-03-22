@@ -1,0 +1,64 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa; /* Un fondo gris claro */
+    color: #333;
+    line-height: 1.6;
+}
+
+.post-container {
+    display: flex;
+    background-color: #fff; /* Fondo blanco para los posts */
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    align-items: flex-start; /* Alinea el texto y las imágenes en la parte superior */
+}
+
+.post-text {
+    width: 35%; /* Aumenta el ancho del texto */
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.post-text h1 {
+    font-size: 2em;
+    color: #495057; /* Un gris más oscuro para los títulos */
+    margin-bottom: 15px;
+}
+
+.post-text p {
+    font-size: 1em;
+    color: #6c757d; /* Un gris más claro para los párrafos */
+}
+
+.post-images {
+    width: 65%; /* Reduce el ancho de las imágenes */
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex; /* Añadido para mejor control de alineación */
+    align-items: center; /* Centra las imágenes verticalmente */
+}
+
+.post-images img {
+    max-height: 350px; /* Aumenta la altura máxima de las imágenes */
+    margin-right: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para las imágenes */
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+}
+
+.post-images img:hover {
+    transform: scale(1.05); /* Ligero aumento al pasar el ratón */
+}
+
+/* Oculta la barra de desplazamiento */
+.post-images::-webkit-scrollbar {
+    display: none;
+}
+
+.post-images {
+    scrollbar-width: none;
+}
