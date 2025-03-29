@@ -7,3 +7,4 @@ class Movielist(ListView):
     model = Pelicula
     template_name = 'Movies/movie_list.html'
 
+class MovieDetailView()
