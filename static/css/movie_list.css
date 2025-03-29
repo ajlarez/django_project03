@@ -1,0 +1,74 @@
+body {
+    background-color: #141414;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #e50914;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+h2 a:hover {
+    color: #e50914;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive grid layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body > * {
+    flex-shrink: 0;
+}
+
+body > :last-child {
+    flex-grow: 1;
+}
+
+body > :last-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Specific styling for each movie container*/
+body > :last-child > * {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
